@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人介绍</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <header>
+            <div class="avatar-container">
+                <div class="avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h1>杨包圣</h1>
+                <p class="subtitle">前端开发学习者 & 技术爱好者</p>
+            </div>
+        </header>
+
+        <!-- 主体内容区域 -->
+        <main>
+            <div class="content-grid">
+                <!-- 关于我部分 -->
+                <section class="card about-me">
+                    <h2><i class="fas fa-user"></i> 关于我</h2>
+                    <p>你好！我是一名正在学习前端开发的技术爱好者，对Web技术和用户体验设计充满热情。我喜欢将创意转化为实际的网页和应用，享受编程带来的成就感。</p>
+                    <p>目前我正在深入学习HTML、CSS和JavaScript，并计划学习React等现代前端框架。我相信持续学习是技术进步的关键。</p>
+                </section>
+
+                <!-- 技能部分 -->
+                <section class="card skills">
+                    <h2><i class="fas fa-code"></i> 我的技能</h2>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">响应式设计</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 兴趣爱好部分 -->
+                <section class="card interests">
+                    <h2><i class="fas fa-heart"></i> 兴趣爱好</h2>
+                    <div class="interest-list">
+                        <div class="interest-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>编程学习</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-book"></i>
+                            <span>阅读技术博客</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-music"></i>
+                            <span>听音乐</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-camera"></i>
+                            <span>摄影</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-gamepad"></i>
+                            <span>独立游戏</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-hiking"></i>
+                            <span>徒步旅行</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 联系信息部分 -->
+                <section class="card contact">
+                    <h2><i class="fas fa-envelope"></i> 联系我</h2>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> zhangxiaoming@example.com</p>
+                        <p><i class="fab fa-github"></i> github.com/zhangxiaoming</p>
+                        <p><i class="fab fa-codepen"></i> codepen.io/zhangxiaoming</p>
+                    </div>
+                    <button id="contactBtn" class="btn">发送消息</button>
+                </section>
+
+                <!-- 学习计划部分 -->
+                <section class="card learning-plan">
+                    <h2><i class="fas fa-graduation-cap"></i> 学习计划</h2>
+                    <ul>
+                        <li>掌握JavaScript高级概念</li>
+                        <li>学习React框架</li>
+                        <li>了解TypeScript</li>
+                        <li>掌握前端工程化工具</li>
+                        <li>学习移动端开发</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>© 2023 杨包圣 - 个人介绍页面</p>
+            <div class="theme-switcher">
+                <button id="themeToggle" class="btn-small">
+                    <i class="fas fa-moon"></i> 切换主题
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 模态对话框 -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>发送消息</h3>
+            <form id="messageForm">
+                <div class="form-group">
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">消息:</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">发送</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
